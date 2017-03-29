@@ -1,0 +1,11 @@
+<div class="semanticSuggestions-container">
+    <h1> Semantic Suggestion </h1>
+    <input type="text" #search (keyup)="getSuggestions(search.value)" [value]="query"/>
+    <ul  [class.noBorder]="noBorder">
+        <li class="schema" [hidden]="topics | schemaPipe" >Topic</li>
+        <li class="concept" #concept *ngFor="let suggestion of (topics | suggestionsPipe)" (click)="selectConcept($event, concept.innerHTML)">{{suggestion}}</li>
+        <li class="schema"  [hidden]="authors | schemaPipe">Author</li>
+        <li class="concept" #concept *ngFor="let suggestion of (authors | suggestionsPipe)" (click)="selectConcept($event, concept.innerHTML)">{{suggestion}}</li>
+    </ul>
+</div>
+

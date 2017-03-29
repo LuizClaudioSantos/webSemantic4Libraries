@@ -1,0 +1,32 @@
+.semanticSuggestions-container{
+    margin: 40px;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 0;
+  width: 70%;
+  font-size: 18px;
+  box-shadow: none;
+  border-radius: none;
+  border: solid 1px #333;
+}
+
+ul {
+    width: 70%;
+    border: solid 1px #333;
+}
+
+.noBorder {
+    border: none;
+}
+
+li:not(.schema):hover {
+    background-color: #FFAA1E;
+}
+
+.schema {
+    font-size: 20px;
+    background-color: #333;
+    color: #F5F5F5; 
+}
