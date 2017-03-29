@@ -29,30 +29,6 @@ export class StardogService {
     
     semanticSuggestions(querySearch : string) : Observable < Object [] > {
             let params = new URLSearchParams();
-            /*
-            let query = `PREFIX skos:<http://www.w3.org/2004/02/skos/core#>` +
-                   `PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> ` +
-                   `SELECT DISTINCT ?indexableLabel ?conceptURI ?schemeLabel ` +
-                        `{ ` +
-                            `{ ` +
-                                `SELECT DISTINCT ?indexableLabel ?conceptURI ?schemeLabel ` +
-                                `WHERE { ` +
-                                   `?conceptURI skos:inScheme <http://thesaurus.iadb.org/publicthesauri/IdBAuthors>. ` + 
-                                   `<http://thesaurus.iadb.org/publicthesauri/IdBAuthors> rdfs:label ?schemeLabel. ` +
-                                   `?conceptURI skos:prefLabel ?indexableLabel. ` +
-                                   `Filter contains (?indexableLabel, \"${querySearch}\") ` +
-                                `} LIMIT 16 ` +
-                            `} UNION { ` +
-                                `SELECT DISTINCT ?indexableLabel ?conceptURI ?schemeLabel ` +
-                                `WHERE { ` +
-                                   `?conceptURI skos:inScheme <http://thesaurus.iadb.org/publicthesauri/IdBTopics>. ` +
-                                   `<http://thesaurus.iadb.org/publicthesauri/IdBTopics> rdfs:label ?schemeLabel. ` +
-                                   `?conceptURI skos:prefLabel ?indexableLabel. ` +
-                                   `Filter contains (?indexableLabel, \"${querySearch}\") ` +
-                                `} LIMIT 16 ` +
-                             `} ` +
-                        `} `;      
-           */          
             let query = `PREFIX skos:<http://www.w3.org/2004/02/skos/core#>` +
                    `PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> ` +
                    `SELECT DISTINCT ?indexableLabel ?conceptURI ?schemeLabel ` +
